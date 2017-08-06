@@ -12,3 +12,17 @@ A simple-ish ISA and an implementation.
     ip  : 24b
     sp  : 24b
     flag: 24b
+
+## Instruction Format
+
+    000 000 000 000 000 000 000 000
+
+    opcode|operand
+
+### r-class
+
+    000 000|000 000
+
+### i-class
+
+    000 000|000 000 000 000 000 000
