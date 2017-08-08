@@ -11,6 +11,7 @@ A simple-ish ISA and an implementation.
     bakc: 48b
     ip  : 24b
     sp  : 24b
+    bp  : 24b
     flag: 24b
 
 ## Instruction Format
