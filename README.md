@@ -74,4 +74,5 @@ HOB\LOB |  000 | 001 | 010 | 011 | 100 | 101 | 110 | 111
     int
 
 _splt: splits `accc` into `acca` (high bits) and `accb` (low bits)_
+
 _merg: inverse of splt_
