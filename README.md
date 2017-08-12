@@ -5,16 +5,16 @@ A simple-ish ISA and an implementation.
 
 Register | Size | Operand ID
 :-   | :-: | :-:
-acca | 24b | 
-accb | 24b | 
-accc | 48b | 
-baka | 24b | 
-bakb | 24b | 
-bakc | 48b | 
-ip   | 24b | 
-sp   | 24b | 
-bp   | 24b | 
-flag | 24b | 
+acca | 24b | 001
+accb | 24b | 010
+accc | 48b | 011
+baka | 24b | 101
+bakb | 24b | 110
+bakc | 48b | 111
+ip   | 24b |  -
+sp   | 24b |  -
+bp   | 24b |  -
+flag | 24b |  -
 
 ## Instruction Format
 
