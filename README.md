@@ -50,26 +50,17 @@ HOB\LOB |  000 | 001 | 010 | 011 | 100 | 101 | 110 | 111
     jnz
     jlz
 
-    adda    suba    mula    diva
-    addb    subb    mulb    divb
-    addc    subc    mulc    divc
+    add    sub    mul    div
 
-    anda    ora     nota    xora
-    andb    orb     notb    xorb
+    and    or     not    xor
 
-    psha    popa
-    pshb    popb
-    pshc    popc
+    psh    pop
 
-    swpa
-    swpb
-    swpc
+    swp
 
     splt    merg
 
-    stoa    loda
-    stob    lodb
-    stoc    lodc
+    sto    lod
 
     imm
 
