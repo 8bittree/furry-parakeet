@@ -41,16 +41,16 @@ flag | 24b |  -
 
 ## Opcode Listing
 
- Hob\Lob |  000 | 001 |  010 |  011 | 100 | 101 | 110 | 111
-   :-:   |  :-: | :-: |  :-: |  :-: | :-: | :-: | :-: | :-:
-   000   | noop | swp | push |  pop | add | sub | mul | div
-   001   | jmp  | jz  | jnz  | jlz  | not | and | or  | xor
-   010   |      |     |      |      | add | sub | mul | div
-   011   | jmp  | jz  | jnz  | jlz  |     |     |     | 
-   100   |      |     | sto  | load |     |     |     | 
-   101   |      |     |      |      |     |     |     | 
-   110   |  -   |  -  |  -   |  -   |  -  |  -  |  -  |  -
-   111   |  -   |  -  |  -   |  -   |  -  |  -  |  -  |  -
+ Hob\Lob |  000 | 001 | 010  | 011  | 100 | 101  | 110 | 111
+   :-:   |  :-: | :-: | :-:  | :-:  | :-: | :-:  | :-: | :-:
+   000   | noop | swp | push | pop  | add | sub  | mul | div
+   001   | jmp  | jz  | jnz  | jlz  | not | and  | or  | xor
+   010   |      |     |      |      | add | sub  | mul | div
+   011   | jmp  | jz  | jnz  | jlz  | imm | immh |     | 
+   100   |      |     | sto  | load |     |      |     | 
+   101   |      |     |      |      |     |      |     | 
+   110   |  -   |  -  |  -   |  -   |  -  |  -   |  -  |  -
+   111   |  -   |  -  |  -   |  -   |  -  |  -   |  -  |  -
 
     noop
 
@@ -71,7 +71,7 @@ flag | 24b |  -
 
     sto     load
 
-    imm
+    imm     immh
 
     int
 
