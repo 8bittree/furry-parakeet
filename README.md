@@ -47,7 +47,7 @@ flag | 24b |  -
    001   | jmp  | jz   | jnz  | jlz  | not | and  | or  | xor
    010   | merg | splt |      |      | add | sub  | mul | div
    011   | jmp  | jz   | jnz  | jlz  | imm | immh |     | 
-   100   |      |      | sto  | load |     |      |     | 
+   100   | int  |      | sto  | load |     |      |     | 
    101   |      |      |      |      |     |      |     | 
    110   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
    111   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
