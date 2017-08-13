@@ -4,13 +4,13 @@ A simple-ish ISA and an implementation.
 ## Registers
 
 Register | Size | Operand ID
-:-   | :-: |  :-:
-acca | 24b | 0001
-accb | 24b | 0010
-accc | 48b | 0011
-baka | 24b | 0101
-bakb | 24b | 0110
-bakc | 48b | 0111
+:-   | :-: | :-:
+acca | 24b | 001
+accb | 24b | 010
+accc | 48b | 011
+baka | 24b | 101
+bakb | 24b | 110
+bakc | 48b | 111
 ip   | 24b |  -
 sp   | 24b |  -
 bp   | 24b |  -
@@ -24,9 +24,10 @@ flag | 24b |  -
  - `-` = reserved
  - `0` = `0`
  - `c` = opcode
- - `o` = operand ID
+ - `o` = destination operand
+ - `p` = second operand
 
-        ---0 cccc 0ooo
+        c0c ccc ooo ppp
 
 ### i-class
 
@@ -35,9 +36,10 @@ flag | 24b |  -
  - `0` = `0`
  - `1` = `1`
  - `c` = opcode
+ - `o` = destination operand
  - `i` = immediate value
 
-        ---1 cccc iiii iiii iiii iiii
+        -1c ccc ooo iii iii iii iii iii
 
 ## Opcode Listing
 
