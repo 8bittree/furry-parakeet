@@ -18,17 +18,26 @@ flag | 24b |  -
 
 ## Instruction Format
 
-    0000 0000 0000 0000 0000 0000
-
-    opcode|operand
-
 ### r-class
 
-    0000 0000|0000
+ - 12b
+ - - = reserved
+ - 0 = 0
+ - c = opcode
+ - o = operand ID
+
+    ---0 cccc 0ooo
 
 ### i-class
 
-    0000 0000|0000 0000 0000 0000
+ - 24b
+ - - = reserved
+ - 0 = 0
+ - 1 = 1
+ - c = opcode
+ - i = immediate value
+
+    ---1 cccc iiii iiii iiii iiii
 
 ## Opcode Listing
 
