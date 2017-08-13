@@ -43,10 +43,10 @@ flag | 24b |  -
 
 Hob\Lob |  000 | 001 |  010 |  011 | 100 | 101 | 110 | 111
    :-:  |  :-: | :-: |  :-: |  :-: | :-: | :-: | :-: | :-:
-    00  | noop |     |      |      |     |     |     | 
-    01  | jmpr | jzr | jnzr | jlzr |     |     |     | 
-    10  |      |     |      |      |     |     |     | 
-    11  | jmpi | jzi | jnzi | jlzi |     |     |     | 
+   00   | noop | swp | push |  pop | add | sub | mul | div
+   01   | jmpr | jzr | jnzr | jlzr | not | and | or  | xor
+   10   |      |     |      |      | add | sub | mul | div
+   11   | jmpi | jzi | jnzi | jlzi |     |     |     | 
 
     noop
 
@@ -59,7 +59,7 @@ Hob\Lob |  000 | 001 |  010 |  011 | 100 | 101 | 110 | 111
 
     and     or      not     xor
 
-    psh     pop
+    push     pop
 
     swp
 
