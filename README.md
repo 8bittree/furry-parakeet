@@ -21,23 +21,23 @@ flag | 24b |  -
 ### r-class
 
  - 12b
- - - = reserved
- - 0 = 0
- - c = opcode
- - o = operand ID
+ - `-` = reserved
+ - `0` = `0`
+ - `c` = opcode
+ - `o` = operand ID
 
-    ---0 cccc 0ooo
+      ---0 cccc 0ooo
 
 ### i-class
 
  - 24b
- - - = reserved
- - 0 = 0
- - 1 = 1
- - c = opcode
- - i = immediate value
+ - `-` = reserved
+ - `0` = `0`
+ - `1` = `1`
+ - `c` = opcode
+ - `i` = immediate value
 
-    ---1 cccc iiii iiii iiii iiii
+      ---1 cccc iiii iiii iiii iiii
 
 ## Opcode Listing
 
