@@ -54,22 +54,22 @@ HOB\LOB |  000 | 001 | 010 | 011 | 100 | 101 | 110 | 111
 
     noop
 
-    jump
-    jz
-    jnz
-    jlz
+    jmpi    jmpr
+    jzi     jzr
+    jnzi    jnzr
+    jlzi    jlzr
 
-    add    sub    mul    div
+    add     sub     mul     div
 
-    and    or     not    xor
+    and     or      not     xor
 
-    psh    pop
+    psh     pop
 
     swp
 
     splt    merg
 
-    sto    lod
+    sto     lod
 
     imm
 
