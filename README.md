@@ -26,7 +26,7 @@ flag | 24b |  -
  - `c` = opcode
  - `o` = operand ID
 
-      ---0 cccc 0ooo
+        ---0 cccc 0ooo
 
 ### i-class
 
@@ -37,20 +37,16 @@ flag | 24b |  -
  - `c` = opcode
  - `i` = immediate value
 
-      ---1 cccc iiii iiii iiii iiii
+        ---1 cccc iiii iiii iiii iiii
 
 ## Opcode Listing
 
-HOB\LOB |  000 | 001 | 010 | 011 | 100 | 101 | 110 | 111
-   :-:  |  :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-:
-   000  | noop |     |     |     |     |     |     | 
-   001  |      |     |     |     |     |     |     | 
-   010  |      |     |     |     |     |     |     | 
-   011  |      |     |     |     |     |     |     | 
-   100  |      |     |     |     |     |     |     | 
-   101  |      |     |     |     |     |     |     | 
-   110  |      |     |     |     |     |     |     | 
-   111  |      |     |     |     |     |     |     | 
+Hob\Lob |  000 | 001 |  010 |  011 | 100 | 101 | 110 | 111
+   :-:  |  :-: | :-: |  :-: |  :-: | :-: | :-: | :-: | :-:
+    00  | noop |     |      |      |     |     |     | 
+    01  | jmpr | jzr | jnzr | jlzr |     |     |     | 
+    10  |      |     |      |      |     |     |     | 
+    11  | jmpi | jzi | jnzi | jlzi |     |     |     | 
 
     noop
 
