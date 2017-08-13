@@ -21,7 +21,6 @@ flag | 24b |  -
 ### r-class
 
  - 12b
- - `-` = reserved
  - `0` = `0`
  - `c` = opcode
  - `o` = destination operand
@@ -32,30 +31,33 @@ flag | 24b |  -
 ### i-class
 
  - 24b
- - `-` = reserved
  - `0` = `0`
  - `1` = `1`
  - `c` = opcode
  - `o` = destination operand
  - `i` = immediate value
 
-        -1c ccc ooo iii iii iii iii iii
+        01c ccc ooo iii iii iii iii iii
 
 ## Opcode Listing
 
-Hob\Lob |  000 | 001 |  010 |  011 | 100 | 101 | 110 | 111
-   :-:  |  :-: | :-: |  :-: |  :-: | :-: | :-: | :-: | :-:
-   00   | noop | swp | push |  pop | add | sub | mul | div
-   01   | jmpr | jzr | jnzr | jlzr | not | and | or  | xor
-   10   |      |     |      |      | add | sub | mul | div
-   11   | jmpi | jzi | jnzi | jlzi |     |     |     | 
+ Hob\Lob |  000 | 001 |  010 |  011 | 100 | 101 | 110 | 111
+   :-:   |  :-: | :-: |  :-: |  :-: | :-: | :-: | :-: | :-:
+   000   | noop | swp | push |  pop | add | sub | mul | div
+   001   | jmp  | jz  | jnz  | jlz  | not | and | or  | xor
+   010   |      |     |      |      | add | sub | mul | div
+   011   | jmp  | jz  | jnz  | jlz  |     |     |     | 
+   100   |      |     |      |      |     |     |     | 
+   101   |      |     |      |      |     |     |     | 
+   110   |  -   |  -  |  -   |  -   |  -  |  -  |  -  |  -
+   111   |  -   |  -  |  -   |  -   |  -  |  -  |  -  |  -
 
     noop
 
-    jmpi    jmpr
-    jzi     jzr
-    jnzi    jnzr
-    jlzi    jlzr
+    jmp
+    jz 
+    jnz
+    jlz
 
     add     sub     mul     div
 
