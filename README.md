@@ -68,13 +68,22 @@ flag | 24b |  -
       - `ppp`: Ignored
  - Description: Exchanges the values in an `acc` and `bak` register pair.
 
+### `push`
+
+ - Format: r-class
+ - Opcode: 000 010
+ - Operands:
+      - `ooo`: The register to push
+      - `ppp`: Ignored
+ - Description: Decrements `sp`, then copies value of `ooo` to `[sp]`.
+
+pop
+
 jmp     jz      jnz     jlz
 
 add     sub     mul     div
 
 and     or      not     xor
-
-push    pop
 
 splt    merg
 
