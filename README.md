@@ -59,6 +59,15 @@ flag | 24b |  -
  - Operands: Ignored
  - Description: Does nothing for a cycle
 
+### `swp`
+
+ - Format: r-class
+ - Opcode: 000 001
+ - Operands:
+      - `ooo`: The register pair to swap, according to the `acc` register's ID
+      - `ppp`: Ignored
+ - Description: Exchanges the values in an `acc` and `bak` register pair.
+
 jmp     jz      jnz     jlz
 
 add     sub     mul     div
@@ -66,8 +75,6 @@ add     sub     mul     div
 and     or      not     xor
 
 push    pop
-
-swp
 
 splt    merg
 
