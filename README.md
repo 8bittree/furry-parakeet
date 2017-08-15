@@ -52,7 +52,13 @@ flag | 24b |  -
    110   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
    111   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
 
-    noop
+### `noop`
+
+ - Format: r-class
+ - Opcode: 000 000
+ - Description: Does nothing for a cycle
+
+
 
     jmp
     jz 
