@@ -45,10 +45,10 @@ flag | 24b |  -
    :-:   |  :-: | :-:  | :-:  | :-:  | :-: | :-:  | :-: | :-:
    000   | noop | swp  | push | pop  | add | sub  | mul | div
    001   | jmp  | jz   | jnz  | jlz  | not | and  | or  | xor
-   010   | merg | splt |      |      | add | sub  | mul | div
-   011   | jmp  | jz   | jnz  | jlz  | imm | immh |     | 
-   100   | int  |      | sto  | load |     |      |     | 
-   101   |      |      |      |      |     |      |     | 
+   010   | merg | splt |  -   |  -   | add | sub  | mul | div
+   011   | jmp  | jz   | jnz  | jlz  | imm | immh |  -  |  -
+   100   | int  |  -   | sto  | load |  -  |  -   |  -  |  -
+   101   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
    110   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
    111   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
 
@@ -58,28 +58,23 @@ flag | 24b |  -
  - Opcode: 000 000
  - Description: Does nothing for a cycle
 
+jmp     jz      jnz     jlz
 
+add     sub     mul     div
 
-    jmp
-    jz 
-    jnz
-    jlz
+and     or      not     xor
 
-    add     sub     mul     div
+push    pop
 
-    and     or      not     xor
+swp
 
-    push     pop
+splt    merg
 
-    swp
+sto     load
 
-    splt    merg
+imm     immh
 
-    sto     load
-
-    imm     immh
-
-    int
+int
 
 _splt: splits `accc` into `acca` (high bits) and `accb` (low bits)_
 
