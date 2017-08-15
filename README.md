@@ -56,6 +56,7 @@ flag | 24b |  -
 
  - Format: r-class
  - Opcode: 000 000
+ - Operands: Ignored
  - Description: Does nothing for a cycle
 
 jmp     jz      jnz     jlz
