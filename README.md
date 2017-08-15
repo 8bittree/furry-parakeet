@@ -77,7 +77,14 @@ flag | 24b |  -
       - `ppp`: Ignored
  - Description: Decrements `sp`, then copies value of `ooo` to `[sp]`.
 
-pop
+### `pop`
+
+ - Format: r-class
+ - Opcade: 000 011
+ - Operands:
+      - `ooo`: The register to pop into
+      - `ppp`: Ignored
+ - Description: Copies the value of `[sp]` into `ooo`, then increments `sp`.
 
 jmp     jz      jnz     jlz
 
