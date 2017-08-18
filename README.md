@@ -86,9 +86,25 @@ flag | 24b |  -
       - `ppp`: Ignored
  - Description: Copies the value of `[sp]` into `ooo`, then increments `sp`.
 
-jmp     jz      jnz     jlz
+### `add`
 
-add     sub     mul     div
+ - Format: r-class
+ - Opcode: 000 100
+ - Operands:
+      - `ooo`: Destination register to add to.
+      - `ppp`: Second regist to add.
+ - Description: Adds value in register `ppp` to register `ooo`.
+
+ - Format: i-class
+ - Opcode: 010 100
+ - Operands:
+      - `ooo`: Destination register to add to.
+      - `i`: Value to add.
+ - Description: Adds immediate value to register `ooo`.
+
+sub     mul     div
+
+jmp     jz      jnz     jlz
 
 and     or      not     xor
 
