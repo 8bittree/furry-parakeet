@@ -95,6 +95,8 @@ flag | 24b |  -
       - `ppp`: Second regist to add.
  - Description: Adds value in register `ppp` to register `ooo`.
 
+---
+
  - Format: i-class
  - Opcode: 010 100
  - Operands:
@@ -102,7 +104,25 @@ flag | 24b |  -
       - `i`: Value to add.
  - Description: Adds immediate value to register `ooo`.
 
-sub     mul     div
+### `sub`
+
+ - Format: r-class
+ - Opcode: 000 101
+ - Operands:
+      - `ooo`: Destination register to subtract from.
+      - `ppp`: Second register to subtract.
+ - Description: Subtracts `ppp` from `ooo`, stores result in `ooo`.
+
+---
+
+ - Format: i-class
+ - Opcode: 010 101
+ - Operands:
+      - `ooo`: Destination register to subtract from.
+      - `i`: Value to subtract.
+ - Description: Subtracts `i` from `ooo`, stores result in `ooo`.
+
+mul     div
 
 jmp     jz      jnz     jlz
 
