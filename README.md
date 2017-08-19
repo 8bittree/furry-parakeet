@@ -158,4 +158,12 @@ _splt: splits `accc` into `acca` (high bits) and `accb` (low bits)_
       - `ppp`: Ignored
  - Description: Exchanges the values in an `acc` and `bak` register pair.
 
-`xor`
+### `xor`
+
+ - Format: r-class
+ - Opcode: 
+ - Operands:
+      - `ooo`: First input and destination register
+      - `ppp`: Second input register
+ - Description: Performs and Exclusive Or of `ooo` and `ppp`, storing the result
+   in `ooo`.
