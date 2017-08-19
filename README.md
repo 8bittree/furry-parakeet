@@ -52,40 +52,6 @@ flag | 24b |  -
    110   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
    111   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
 
-### `noop`
-
- - Format: r-class
- - Opcode: 000 000
- - Operands: Ignored
- - Description: Does nothing for a cycle
-
-### `swp`
-
- - Format: r-class
- - Opcode: 000 001
- - Operands:
-      - `ooo`: The register pair to swap, according to the `acc` register's ID
-      - `ppp`: Ignored
- - Description: Exchanges the values in an `acc` and `bak` register pair.
-
-### `push`
-
- - Format: r-class
- - Opcode: 000 010
- - Operands:
-      - `ooo`: The register to push
-      - `ppp`: Ignored
- - Description: Decrements `sp`, then copies value of `ooo` to `[sp]`.
-
-### `pop`
-
- - Format: r-class
- - Opcade: 000 011
- - Operands:
-      - `ooo`: The register to pop into
-      - `ppp`: Ignored
- - Description: Copies the value of `[sp]` into `ooo`, then increments `sp`.
-
 ### `add`
 
  - Format: r-class
@@ -103,6 +69,67 @@ flag | 24b |  -
       - `ooo`: Destination register to add to.
       - `i`: Value to add.
  - Description: Adds immediate value to register `ooo`.
+
+`and`
+
+`div`
+
+`imm`
+
+`immh`
+
+`int`
+
+`jlz`
+
+`jmp`
+
+`jnz`
+
+`jz`
+
+`load`
+
+`merg`
+
+_merg: inverse of splt_
+
+`mul`
+
+### `noop`
+
+ - Format: r-class
+ - Opcode: 000 000
+ - Operands: Ignored
+ - Description: Does nothing for a cycle
+
+`not`
+
+`or`
+
+### `pop`
+
+ - Format: r-class
+ - Opcade: 000 011
+ - Operands:
+      - `ooo`: The register to pop into
+      - `ppp`: Ignored
+ - Description: Copies the value of `[sp]` into `ooo`, then increments `sp`.
+
+### `push`
+
+ - Format: r-class
+ - Opcode: 000 010
+ - Operands:
+      - `ooo`: The register to push
+      - `ppp`: Ignored
+ - Description: Decrements `sp`, then copies value of `ooo` to `[sp]`.
+
+`splt`
+
+_splt: splits `accc` into `acca` (high bits) and `accb` (low bits)_
+
+`sto`
 
 ### `sub`
 
@@ -122,20 +149,13 @@ flag | 24b |  -
       - `i`: Value to subtract.
  - Description: Subtracts `i` from `ooo`, stores result in `ooo`.
 
-mul     div
+### `swp`
 
-jmp     jz      jnz     jlz
+ - Format: r-class
+ - Opcode: 000 001
+ - Operands:
+      - `ooo`: The register pair to swap, according to the `acc` register's ID
+      - `ppp`: Ignored
+ - Description: Exchanges the values in an `acc` and `bak` register pair.
 
-and     or      not     xor
-
-splt    merg
-
-sto     load
-
-imm     immh
-
-int
-
-_splt: splits `accc` into `acca` (high bits) and `accb` (low bits)_
-
-_merg: inverse of splt_
+`xor`
