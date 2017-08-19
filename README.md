@@ -165,5 +165,5 @@ _splt: splits `accc` into `acca` (high bits) and `accb` (low bits)_
  - Operands:
       - `ooo`: First input and destination register
       - `ppp`: Second input register
- - Description: Performs and Exclusive Or of `ooo` and `ppp`, storing the result
-   in `ooo`.
+ - Description: Performs a logical exclusive or of `ooo` and `ppp`, storing the
+   result in `ooo`.
