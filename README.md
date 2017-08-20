@@ -80,7 +80,25 @@ flag | 24b |  -
  - Description: Performs a logical and of `ooo` and `ppp`, storing the result
    into `ooo`.
 
-`div`
+### `div`
+
+ - Format: r-class
+ - Opcode: 000 111
+ - Operands:
+      - `ooo`: Dividend and destionation.
+      - `ppp`: Divisor.
+ - Description: Performs integer division of `ooo` by `ppp`, storing the
+   quotient in `ooo`.
+
+---
+
+ - Format: i-class
+ - Opcode: 010 111
+ - Operands:
+      - `ooo`: Dividend and destination.
+      - `i`: Divisor.
+ - Description: Performs integer division of `ooo` by `i`, storing the quotient
+   in `ooo`.
 
 `imm`
 
