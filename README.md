@@ -88,7 +88,7 @@ flag | 24b |  -
       - `ooo`: Dividend and destionation.
       - `ppp`: Divisor.
  - Description: Performs integer division of `ooo` by `ppp`, storing the
-   quotient in `ooo`.
+   quotient in `ooo` and the remainder in `ooo`'s alternative.
 
 ---
 
