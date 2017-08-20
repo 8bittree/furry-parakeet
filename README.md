@@ -70,7 +70,15 @@ flag | 24b |  -
       - `i`: Value to add.
  - Description: Adds immediate value to register `ooo`.
 
-`and`
+### `and`
+
+ - Format: r-class
+ - Opcode: 001 101
+ - Operands:
+      - `ooo`: First input and destination.
+      - `ppp`: Second input.
+ - Description: Performs a logical and of `ooo` and `ppp`, storing the result
+   into `ooo`.
 
 `div`
 
