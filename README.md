@@ -155,7 +155,14 @@ _merg: inverse of splt_
 
 _splt: splits `accc` into `acca` (high bits) and `accb` (low bits)_
 
-`sto`
+### `sto`
+
+ - Format: r-class
+ - Opcode: 100 010
+ - Operands:
+      - `ooo`: The register to store
+      - `ppp`: The register holding the address at which to store.
+ - Description: Stores value of `ooo` at `[ppp]`.
 
 ### `sub`
 
