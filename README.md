@@ -129,7 +129,14 @@ _merg: inverse of splt_
  - Operands: Ignored
  - Description: Does nothing for a cycle
 
-`not`
+### `not`
+
+ - Format: r-class
+ - Opcode: 001 100
+ - Operands:
+      - `ooo`: The register to not.
+      - `ppp`: Ignored
+ - Description: Logically nots `ooo`.
 
 `or`
 
