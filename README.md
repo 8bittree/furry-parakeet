@@ -138,7 +138,15 @@ _merg: inverse of splt_
       - `ppp`: Ignored
  - Description: Logically nots `ooo`.
 
-`or`
+### `or`
+
+ - Format: r-class
+ - Opcode: 001 110
+ - Operands:
+      - `ooo`: First input and destination register.
+      - `ppp`: Second input register.
+ - Description: Performs a logical or of `ooo` and `ppp`, storing the result in
+   `ooo`.
 
 ### `pop`
 
