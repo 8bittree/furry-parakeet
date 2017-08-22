@@ -1,5 +1,6 @@
 # furry-parakeet
-A simple-ish ISA and an implementation.
+A ~~simple-ish~~ small-ish, overly complicated, and poorly thought-out ISA and
+maybe an implementation.
 
 ## Registers
 
