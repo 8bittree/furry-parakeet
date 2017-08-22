@@ -98,7 +98,7 @@ flag | 24b |  -
       - `ooo`: Dividend and destination.
       - `i`: Divisor.
  - Description: Performs integer division of `ooo` by `i`, storing the quotient
-   in `ooo`.
+   in `ooo` and the remainder in `ooo`'s alternative.
 
 `imm`
 
