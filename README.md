@@ -169,7 +169,13 @@ _merg: inverse of splt_
 
 `splt`
 
-_splt: splits `accc` into `acca` (high bits) and `accb` (low bits)_
+ - Format: i-class
+ - Opcode: 010 001
+ - Operands:
+      - `ooo`: Ignored
+      - `i`: Ignored
+ - Description: Copies the higher half of `accc` into `acca` and the lower half
+   of `accc` into `accb`.
 
 ### `sto`
 
