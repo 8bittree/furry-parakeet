@@ -183,7 +183,7 @@ _merg: inverse of splt_
       - `ppp`: Ignored
  - Description: Decrements `sp`, then copies value of `ooo` to `[sp]`.
 
-`splt`
+### `splt`
 
  - Format: i-class
  - Opcode: 010 001
