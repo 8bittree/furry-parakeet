@@ -121,7 +121,23 @@ flag | 24b |  -
 
 _merg: inverse of splt_
 
-`mul`
+### `mul`
+
+ - Format: r-class
+ - Opcode: 000 110
+ - Operands:
+      - `ooo`: Multiplicand and destination.
+      - `ppp`: Multiplier.
+ - Description: Multiplies `ooo` by `ppp`, storing the result in `ooo`.
+
+---
+
+ - Format: i-class
+ - Opcode: 010 110
+ - Operands:
+      - `ooo`: Multiplicand and destination.
+      - `i`: Multiplier.
+ - Description: Multiplies `ooo` by `i`, storing the result in `ooo`.
 
 ### `noop`
 
