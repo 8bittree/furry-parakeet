@@ -117,9 +117,15 @@ flag | 24b |  -
 
 `load`
 
-`merg`
+### `merg`
 
-_merg: inverse of splt_
+ - Format: i-class
+ - Opcode: 010 000
+ - Operands:
+      - `ooo`: Ignored
+      - `i`: Ignored
+ - Description: Copies `acca` into the higher half of `accc` and `accb` into the
+   lower half of `accc`.
 
 ### `mul`
 
