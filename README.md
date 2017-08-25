@@ -101,7 +101,15 @@ flag | 24b |  -
  - Description: Performs integer division of `ooo` by `i`, storing the quotient
    in `ooo` and the remainder in `ooo`'s alternative.
 
-`imm`
+### `imm`
+
+ - Format: i-class
+ - Opcode: 011 100
+ - Operands:
+      - `ooo`: Destination register.
+      - `i`: Value.
+ - Description: Stores `i` in `ooo`, using sign extension to fill the upper
+   bits.
 
 `immh`
 
