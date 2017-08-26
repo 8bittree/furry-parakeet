@@ -111,7 +111,15 @@ flag | 24b |  -
  - Description: Stores `i` in `ooo`, using sign extension to fill the upper
    bits.
 
-`immh`
+### `immh`
+
+ - Format: i-class
+ - Opcode: 011 101
+ - Operands:
+      - `ooo`: Destination register.
+      - `i`: Value.
+ - Description: Stores the lower 12 bits of `i` in the upper 12 bits of `ooo`.
+   The lower 12 bits of `ooo` are unmodified.
 
 `int`
 
