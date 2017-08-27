@@ -121,7 +121,14 @@ flag | 24b |  -
  - Description: Stores the lower 12 bits of `i` in the upper 12 bits of `ooo`.
    The lower 12 bits of `ooo` are unmodified.
 
-`int`
+### `int`
+
+ - Format: r-class
+ - Opcode: 100 000
+ - Operands:
+      - `ooo`: Interrupt ID.
+      - `ppp`: Argument.
+ - Description: Triggers a software interrupt.
 
 `jlz`
 
