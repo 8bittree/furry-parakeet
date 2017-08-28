@@ -130,7 +130,23 @@ flag | 24b |  -
       - `ppp`: Argument.
  - Description: Triggers a software interrupt.
 
-`jlz`
+### `jlz`
+
+ - Format: r-class
+ - Opcode: 001 011
+ - Operands:
+      - `ooo`: Value to compare.
+      - `ppp`: Location to jump to.
+ - Description: Jumps to `ppp` if `ooo` is less than zero.
+
+---
+
+ - Format: i-class
+ - Opcode: 011 011
+ - Operands:
+      - `ooo`: Value to compare.
+      - `i`: Location relative to `ip` to jump to.
+ - Description: Jumps to `i` if `ooo` is less than zero.
 
 `jmp`
 
