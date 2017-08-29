@@ -146,7 +146,7 @@ flag | 24b |  -
  - Operands:
       - `ooo`: Value to compare.
       - `i`: Location relative to `ip` to jump to.
- - Description: Jumps to `i` if `ooo` is less than zero.
+ - Description: Jumps to `ip + i` if `ooo` is less than zero.
 
 ### `jmp`
 
