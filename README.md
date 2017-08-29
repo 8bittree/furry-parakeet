@@ -148,7 +148,23 @@ flag | 24b |  -
       - `i`: Location relative to `ip` to jump to.
  - Description: Jumps to `i` if `ooo` is less than zero.
 
-`jmp`
+### `jmp`
+
+ - Format: r-class
+ - Opcode: 001 000
+ - Operands:
+      - `ooo`: Ignored.
+      - `ppp`: Location to jump to.
+ - Description: Unconditionally jumps to `ppp`.
+
+---
+
+ - Format: i-class
+ - Opcode: 011 000
+ - Operands:
+      - `ooo`: Ignored.
+      - `i`: Location relative to `ip` to jump to.
+ - Description: Unconditionally jumps to `ip + i`.
 
 `jnz`
 
