@@ -170,7 +170,14 @@ flag | 24b |  -
 
 `jz`
 
-`load`
+### `load`
+
+ - Format: r-class
+ - Opcode: 100 011
+ - Operands:
+      - `ooo`: The register to load into.
+      - `ppp`: The register holding the address from which to load.
+ - Description: Loads value at `[ppp]` into `ooo`.
 
 ### `merg`
 
