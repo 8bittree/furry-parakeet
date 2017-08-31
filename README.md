@@ -166,7 +166,23 @@ flag | 24b |  -
       - `i`: Location relative to `ip` to jump to.
  - Description: Unconditionally jumps to `ip + i`.
 
-`jnz`
+### `jnz`
+
+ - Format: r-class
+ - Opcode: 001 010
+ - Operands:
+      - `ooo`: Value to compare.
+      - `ppp`: Location to jump to.
+ - Description: Jumps to `ppp` if `ooo` is not equal to zero.
+
+---
+
+ - Format: i-class
+ - Opcode: 011 010
+ - Operands:
+      - `ooo`: Value to compare.
+      - `i`: Location relative to `ip` to jump to.
+ - Description: Jumps to `ip + i` if `ooo` is not equal to zero.
 
 `jz`
 
