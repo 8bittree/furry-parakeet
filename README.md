@@ -53,6 +53,8 @@ flag | 24b |  -
    110   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
    111   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
 
+Note: `[ooo]` means the memory address pointed to by `ooo`.
+
 ### `add`
 
  - Format: r-class
