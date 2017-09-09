@@ -334,7 +334,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 ### `xor`
 
  - Format: r-class
- - Opcode: 
+ - Opcode: 001 111
  - Operands:
       - `ooo`: First input and destination register
       - `ppp`: Second input register
