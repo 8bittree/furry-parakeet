@@ -49,7 +49,7 @@ flag | 24b |  -
    010   | merg | splt |  -   |  -   | add | sub  | mul | div
    011   | jmp  | jz   | jnz  | jlz  | imm | immh |  -  |  -
    100   | int  |  -   | sto  | load |  -  |  -   |  -  |  -
-   101   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
+   101   |  -   |  -   | in   | out  |  -  |  -   |  -  |  -
    110   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
    111   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
 
@@ -122,6 +122,22 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
       - `i`: Value.
  - Description: Stores the lower 12 bits of `i` in the upper 12 bits of `ooo`.
    The lower 12 bits of `ooo` are unmodified.
+
+### `in`
+
+ - Format: r-class
+ - Opcode: 101 010
+ - Operands:
+      - `ooo`: Destination register.
+      - `ppp`: Sign flag, bit count and port number.
+ - Description: Reads from port specified in lower 12 bits of `ppp` into `ooo`.
+   The format of `ppp` is:
+
+       srr rrr rcc ccc ppp ppp ppp ppp
+
+   where `s` = sign flag, `r` = reserved, `c` = bit count, and `p` = port
+   number. If `s = 1`, the value read in will be sign extended into `ooo`,
+   otherwise it will be `0` extended. Behavior is undefined for `c > 24`.
 
 ### `int`
 
@@ -266,6 +282,8 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
       - `ppp`: Second input register.
  - Description: Performs a logical or of `ooo` and `ppp`, storing the result in
    `ooo`.
+
+### `out`
 
 ### `pop`
 
