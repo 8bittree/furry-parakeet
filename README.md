@@ -61,7 +61,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
  - Opcode: 000 100
  - Operands:
       - `ooo`: Destination register to add to.
-      - `ppp`: Second regist to add.
+      - `ppp`: Second register to add.
  - Description: Adds value in register `ppp` to register `ooo`.
 
 ---
