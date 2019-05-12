@@ -285,6 +285,19 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
 ### `out`
 
+ - Format: r-class
+ - Opcode: 101 011
+ - Operands:
+      - `ooo`: Source register.
+      - `ppp`: Sign flag, bit count, and port number.
+ - Description: Writes `ooo` into port specified in lower 12 bits of `ppp`.
+   The format of `ppp` is:
+
+       rrr rrr rcc ccc ppp ppp ppp ppp
+
+   where `r` = reserved, `c` = bit count, and `p` = port number. Behavior is
+   undefined for `c > 24`.
+
 ### `pop`
 
  - Format: r-class
