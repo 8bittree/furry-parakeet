@@ -1,7 +1,11 @@
 use std::convert::TryInto;
 use std::fmt::{Debug, Error, Formatter};
 
-const MAX_MEM_SIZE: u32 = 16_777_216; // 2^24
+/// Maximum size of a [`Memory`](struct.Memory.html) block in
+/// [`Word`](struct.Word.html)s
+///
+/// = 2^24
+const MAX_MEM_SIZE: u32 = 16_777_216;
 
 #[derive(Clone,Default)]
 pub struct Word {
@@ -32,6 +36,12 @@ pub struct Memory {
 }
 
 impl Memory {
+    /// Creates a new `Memory` block of the given `size`.
+    ///
+    /// The maximum size of a `Memory` block is
+    /// [`MAX_MEM_SIZE`](constant.MAX_MEM_SIZE.html). If `size` is greater
+    /// than that, the created `Memory` block will be
+    /// [`MAX_MEM_SIZE`](constant.MAX_MEM_SIZE.html) long.
     pub fn new(size: u32) -> Self {
         let size = if size > MAX_MEM_SIZE {
             MAX_MEM_SIZE
