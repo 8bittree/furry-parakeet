@@ -1,8 +1,9 @@
 use std::convert::TryInto;
+use std::fmt::{Debug, Error, Formatter};
 
 const MAX_MEM_SIZE: u32 = 16_777_216; // 2^24
 
-#[derive(Clone,Debug,Default)]
+#[derive(Clone,Default)]
 pub struct Word {
     val: [u8; 3],
 }
@@ -10,6 +11,14 @@ pub struct Word {
 impl Word {
     pub fn new() -> Self {
         Word { val: [0; 3] }
+    }
+}
+
+impl Debug for Word {
+    fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
+        f.debug_struct("Word")
+            .field("val", &format_args!("[{}, {}, {}]", &self.val[0], &self.val[1], &self.val[2]))
+            .finish()
     }
 }
 
