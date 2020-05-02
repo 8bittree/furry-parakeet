@@ -1,6 +1,8 @@
 extern crate clap;
 use clap::{Arg, App, crate_version};
 
+mod components;
+
 fn main() {
     println!("Hello, world!");
 
@@ -14,4 +16,7 @@ fn main() {
              .takes_value(true)
              .value_name("FILE"))
         .get_matches();
+
+    let mut mem = dbg!(components::Memory::new(4096));
+    
 }
