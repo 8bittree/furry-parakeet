@@ -7,7 +7,7 @@ use std::fmt::{Debug, Error, Formatter};
 /// = 2^24
 const MAX_MEM_SIZE: u32 = 16_777_216;
 
-#[derive(Clone,Default)]
+#[derive(Clone, Copy, Default)]
 pub struct Word {
     val: [u8; 3],
 }
