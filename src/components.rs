@@ -21,7 +21,7 @@ impl Word {
 impl Debug for Word {
     fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
         f.debug_struct("Word")
-            .field("val", &format_args!("[{}, {}, {}]",
+            .field("val", &format_args!("[{:?}, {:?}, {:?}]",
                                         &self.val[0],
                                         &self.val[1],
                                         &self.val[2]))
