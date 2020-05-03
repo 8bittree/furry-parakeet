@@ -42,16 +42,20 @@ flag | 24b |  -
 
 ## Opcode Listing
 
- Hob\Lob |  000 | 001  | 010  | 011  | 100 | 101  | 110 | 111
-   :-:   |  :-: | :-:  | :-:  | :-:  | :-: | :-:  | :-: | :-:
-   000   | noop | swp  | push | pop  | add | sub  | mul | div
-   001   | jmp  | jz   | jnz  | jlz  | not | and  | or  | xor
-   010   | merg | splt |  -   |  -   | add | sub  | mul | div
-   011   | jmp  | jz   | jnz  | jlz  | imm | immh |  -  |  -
-   100   | int  |  -   | sto  | load |  -  |  -   |  -  |  -
-   101   |  -   |  -   | in   | out  |  -  |  -   |  -  |  -
-   110   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
-   111   |  -   |  -   |  -   |  -   |  -  |  -   |  -  |  -
+*r-class*
+
+**i-class**
+
+ Hob\Lob |    000   |   001    |   010    |   011    |   100   |   101    |   110   |   111
+   :-:   |    :-:   |   :-:    |   :-:    |   :-:    |   :-:   |   :-:    |   :-:   |   :-:
+   000   |  *noop*  |  *swp*   |  *push*  |  *pop*   |  *add*  |  *sub*   |  *mul*  |  *div*
+   001   |  *jmp*   |  *jz*    |  *jnz*   |  *jlz*   |  *not*  |  *and*   |  *or*   |  *xor*
+   010   | **merg** | **splt** |    -     |    -     | **add** | **sub**  | **mul** | **div**
+   011   | **jmp**  | **jz**   | **jnz**  | **jlz**  | **imm** | **immh** |    -    |    -
+   100   |  *int*   |    -     |  *sto*   |  *load*  |    -    |    -     |    -    |    -
+   101   |     -    |    -     |  *in*    |  *out*   |    -    |    -     |    -    |    -
+   110   |     -    |    -     |    -     |    -     |    -    |    -     |    -    |    -
+   111   |     -    |    -     |    -     |    -     |    -    |    -     |    -    |    -
 
 Note: `[ooo]` means the memory address pointed to by `ooo`.
 
