@@ -9,6 +9,7 @@ const MAX_MEM_SIZE: u32 = 16_777_216;
 
 #[derive(Clone, Copy, Default)]
 pub struct Word {
+    // little endian
     val: [u8; 3],
 }
 
@@ -22,9 +23,9 @@ impl Debug for Word {
     fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
         f.debug_struct("Word")
             .field("val", &format_args!("[{:?}, {:?}, {:?}]",
-                                        &self.val[0],
+                                        &self.val[2],
                                         &self.val[1],
-                                        &self.val[2]))
+                                        &self.val[0]))
             .finish()
     }
 }
