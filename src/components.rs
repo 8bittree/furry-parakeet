@@ -30,6 +30,14 @@ impl Debug for Word {
     }
 }
 
+impl From<Word> for u32 {
+    fn from(word: Word) -> u32 {
+        word.val[0] as u32
+            + ((word.val[1] as u32) << 8)
+            + ((word.val[2] as u32) << 16)
+    }
+}
+
 #[derive(Debug)]
 pub struct Memory {
     data: Vec<Word>,
