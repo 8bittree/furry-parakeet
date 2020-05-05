@@ -1,5 +1,6 @@
-use std::convert::TryInto;
-use std::fmt::{Debug, Error, Formatter};
+use std::convert::{TryFrom, TryInto};
+use std::fmt::{Debug, Display, Error, Formatter};
+use std::ops::Index;
 
 /// Maximum size of a [`Memory`](struct.Memory.html) block in
 /// [`Word`](struct.Word.html)s
@@ -58,5 +59,13 @@ impl Memory {
             size
         };
         Memory { data: vec![Word::default(); size.try_into().unwrap()], size }
+    }
+}
+
+impl Index<u32> for Memory {
+    type Output = Word;
+
+    fn index(&self, i: u32) -> &Self::Output {
+        &self.data[usize::try_from(i).unwrap()]
     }
 }
