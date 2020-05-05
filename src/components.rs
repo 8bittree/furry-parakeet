@@ -1,4 +1,4 @@
-use std::convert::{TryFrom, TryInto};
+use std::convert::TryInto;
 use std::fmt::{Debug, Display, Error, Formatter};
 use std::ops::Index;
 
@@ -62,10 +62,10 @@ impl Memory {
     }
 }
 
-impl Index<u32> for Memory {
+impl Index<usize> for Memory {
     type Output = Word;
 
-    fn index(&self, i: u32) -> &Self::Output {
-        &self.data[usize::try_from(i).unwrap()]
+    fn index(&self, i: usize) -> &Self::Output {
+        &self.data[i]
     }
 }
