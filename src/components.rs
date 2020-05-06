@@ -31,6 +31,13 @@ impl Debug for Word {
     }
 }
 
+impl Display for Word {
+    fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
+        let tmp = u32::from(*self).to_string();
+        f.pad_integral(true, "", &tmp)
+    }
+}
+
 impl From<Word> for u32 {
     fn from(word: Word) -> u32 {
         word.val[0] as u32

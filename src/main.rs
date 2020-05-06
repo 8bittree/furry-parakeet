@@ -17,6 +17,12 @@ fn main() {
              .value_name("FILE"))
         .get_matches();
 
-    let mut mem = dbg!(components::Memory::new(4096));
-    
+    let mut mem = components::Memory::new(4096);
+
+    println!("debug: {:?}", mem[0]);
+    println!("alt:   {:#?}", mem[0]);
+
+    println!("debug: {}", mem[0]);
+    println!("alt:   {:#}", mem[0]);
+    println!("pad:   {:4}", mem[0]);
 }
