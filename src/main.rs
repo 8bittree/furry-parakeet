@@ -27,5 +27,6 @@ fn main() {
     println!("pad:   {:4}", mem[0]);
     println!("lhex:  {:x}", mem[0]);
     println!("uhex:  {:#X}", mem[0]);
-    println!("octal: {:04o}", mem[0]);
+    println!("octal: {:08o}", mem[0]);
+    println!("bin:   {:024b}", mem[0]);
 }

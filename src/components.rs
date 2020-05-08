@@ -1,5 +1,5 @@
 use std::convert::TryInto;
-use std::fmt::{Debug, Display, Error, Formatter, LowerHex, Octal, UpperHex};
+use std::fmt::{Binary, Debug, Display, Error, Formatter, LowerHex, Octal, UpperHex};
 use std::ops::Index;
 
 /// Maximum size of a [`Memory`](struct.Memory.html) block in
@@ -17,6 +17,12 @@ pub struct Word {
 impl Word {
     pub fn new() -> Self {
         Word { val: [0; 3] }
+    }
+}
+
+impl Binary for Word {
+    fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
+        Binary::fmt(&u32::from(*self), f)
     }
 }
 
