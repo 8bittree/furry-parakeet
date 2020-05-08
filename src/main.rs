@@ -6,7 +6,7 @@ mod components;
 fn main() {
     println!("Hello, world!");
 
-    let matches = App::new("furry-parakeet")
+    let _matches = App::new("furry-parakeet")
         .about("A shoddy VM for a poorly thought-out ISA.")
         .version(crate_version!())
         .arg(Arg::with_name("d1")
@@ -17,7 +17,7 @@ fn main() {
              .value_name("FILE"))
         .get_matches();
 
-    let mut mem = components::Memory::new(4096);
+    let mem = components::Memory::new(4096);
 
     println!("debug: {:?}", mem[0]);
     println!("alt:   {:#?}", mem[0]);
@@ -25,4 +25,5 @@ fn main() {
     println!("debug: {}", mem[0]);
     println!("alt:   {:#}", mem[0]);
     println!("pad:   {:4}", mem[0]);
+    println!("lhex:  {:x}", mem[0]);
 }
