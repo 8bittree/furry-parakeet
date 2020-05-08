@@ -26,4 +26,5 @@ fn main() {
     println!("alt:   {:#}", mem[0]);
     println!("pad:   {:4}", mem[0]);
     println!("lhex:  {:x}", mem[0]);
+    println!("uhex:  {:#X}", mem[0]);
 }
