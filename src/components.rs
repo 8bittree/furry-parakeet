@@ -1,5 +1,5 @@
 use std::convert::TryInto;
-use std::fmt::{Debug, Display, Error, Formatter, LowerHex, UpperHex};
+use std::fmt::{Debug, Display, Error, Formatter, LowerHex, Octal, UpperHex};
 use std::ops::Index;
 
 /// Maximum size of a [`Memory`](struct.Memory.html) block in
@@ -41,6 +41,12 @@ impl Display for Word {
 impl LowerHex for Word {
     fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
         LowerHex::fmt(&u32::from(*self), f)
+    }
+}
+
+impl Octal for Word {
+    fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
+        Octal::fmt(&u32::from(*self), f)
     }
 }
 
