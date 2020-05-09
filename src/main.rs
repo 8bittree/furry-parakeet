@@ -19,14 +19,14 @@ fn main() {
 
     let mem = components::Memory::new(4096);
 
-    println!("debug: {:?}", mem[0]);
-    println!("alt:   {:#?}", mem[0]);
+    println!("debug:   {:?}", mem[0]);
+    println!("alt:     {:#?}", mem[0]);
 
-    println!("debug: {}", mem[0]);
-    println!("alt:   {:#}", mem[0]);
-    println!("pad:   {:4}", mem[0]);
-    println!("lhex:  {:x}", mem[0]);
-    println!("uhex:  {:#X}", mem[0]);
-    println!("octal: {:08o}", mem[0]);
-    println!("bin:   {:024b}", mem[0]);
+    println!("display: {}", mem[0]);
+    println!("alt:     {:#}", mem[0]);
+    println!("pad:     {:4}", mem[0]);
+    println!("lhex:    {:x}", mem[0]);
+    println!("uhex:    {:#X}", mem[0]);
+    println!("octal:   {:08o}", mem[0]);
+    println!("bin:     {:024b}", mem[0]);
 }

@@ -18,6 +18,13 @@ impl Word {
     pub fn new() -> Self {
         Word { val: [0; 3] }
     }
+
+    pub fn set(&mut self, val: u32) {
+        let bytes = val.to_le_bytes();
+        self.val[0] = bytes[0];
+        self.val[1] = bytes[1];
+        self.val[2] = bytes[2];
+    }
 }
 
 impl Binary for Word {
@@ -67,6 +74,19 @@ impl From<Word> for u32 {
         word.val[0] as u32
             + ((word.val[1] as u32) << 8)
             + ((word.val[2] as u32) << 16)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn can_set_word() {
+        let mut w = Word::new();
+        assert_eq!(0, u32::from(w));
+        w.set(0x5a);
+        assert_eq!(0x5a, u32::from(w));
     }
 }
 
