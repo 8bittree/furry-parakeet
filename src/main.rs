@@ -17,7 +17,9 @@ fn main() {
              .value_name("FILE"))
         .get_matches();
 
-    let mem = components::Memory::new(4096);
+    let mut mem = components::Memory::new(4096);
+
+    mem[0].set(0x1b3);
 
     println!("debug:   {:?}", mem[0]);
     println!("alt:     {:#?}", mem[0]);
