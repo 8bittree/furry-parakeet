@@ -4,18 +4,18 @@ maybe an implementation.
 
 ## Registers
 
-Register | Size | Operand ID
-:-   | :-: | :-:
-acca | 24b | 001
-accb | 24b | 010
-accc | 48b | 011
-baka | 24b | 101
-bakb | 24b | 110
-bakc | 48b | 111
-ip   | 24b |  -
-sp   | 24b |  -
-bp   | 24b |  -
-flag | 24b |  -
+Register | Size | Operand ID | Octal
+:-   | :-: | :-: | :-:
+acca | 24b | 001 | 1
+accb | 24b | 010 | 2
+accc | 48b | 011 | 3
+baka | 24b | 101 | 5
+bakb | 24b | 110 | 6
+bakc | 48b | 111 | 7
+ip   | 24b |  -  | -
+sp   | 24b |  -  | -
+bp   | 24b |  -  | -
+flag | 24b |  -  | -
 
 ## Instruction Format
 
