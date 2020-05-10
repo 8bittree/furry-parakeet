@@ -63,6 +63,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 000 100
+ - Octal: 04
  - Operands:
       - `ooo`: Destination register to add to.
       - `ppp`: Second register to add.
@@ -72,6 +73,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 010 100
+ - Octal: 24
  - Operands:
       - `ooo`: Destination register to add to.
       - `i`: Value to add.
@@ -81,6 +83,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 001 101
+ - Octal: 15
  - Operands:
       - `ooo`: First input and destination.
       - `ppp`: Second input.
@@ -91,6 +94,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 000 111
+ - Octal: 07
  - Operands:
       - `ooo`: Dividend and destionation.
       - `ppp`: Divisor.
@@ -101,6 +105,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 010 111
+ - Octal: 27
  - Operands:
       - `ooo`: Dividend and destination.
       - `i`: Divisor.
@@ -111,6 +116,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 011 100
+ - Octal: 34
  - Operands:
       - `ooo`: Destination register.
       - `i`: Value.
@@ -121,6 +127,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 011 101
+ - Octal: 35
  - Operands:
       - `ooo`: Destination register.
       - `i`: Value.
@@ -131,6 +138,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 101 010
+ - Octal: 52
  - Operands:
       - `ooo`: Destination register.
       - `ppp`: Sign flag, bit count and port number.
@@ -147,6 +155,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 100 000
+ - Octal: 40
  - Operands:
       - `ooo`: Interrupt ID.
       - `ppp`: Argument.
@@ -156,6 +165,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 001 011
+ - Octal: 13
  - Operands:
       - `ooo`: Value to compare.
       - `ppp`: Location to jump to.
@@ -165,6 +175,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 011 011
+ - Octal: 33
  - Operands:
       - `ooo`: Value to compare.
       - `i`: Location relative to `ip` to jump to.
@@ -174,6 +185,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 001 000
+ - Octal: 10
  - Operands:
       - `ooo`: Ignored.
       - `ppp`: Location to jump to.
@@ -183,6 +195,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 011 000
+ - Octal: 30
  - Operands:
       - `ooo`: Ignored.
       - `i`: Location relative to `ip` to jump to.
@@ -192,6 +205,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 001 010
+ - Octal: 12
  - Operands:
       - `ooo`: Value to compare.
       - `ppp`: Location to jump to.
@@ -201,6 +215,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 011 010
+ - Octal: 32
  - Operands:
       - `ooo`: Value to compare.
       - `i`: Location relative to `ip` to jump to.
@@ -210,6 +225,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 001 001
+ - Octal: 11
  - Operands:
       - `ooo`: Value to compare.
       - `ppp`: Location to jump to.
@@ -219,6 +235,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 011 001
+ - Octal: 31
  - Operands:
       - `ooo`: Value to compare.
       - `i`: Location relative to `ip` to jump to.
@@ -228,6 +245,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 100 011
+ - Octal: 43
  - Operands:
       - `ooo`: The register to load into.
       - `ppp`: The register holding the address from which to load.
@@ -237,6 +255,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 010 000
+ - Octal: 20
  - Operands:
       - `ooo`: Ignored
       - `i`: Ignored
@@ -247,6 +266,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 000 110
+ - Octal: 06
  - Operands:
       - `ooo`: Multiplicand and destination.
       - `ppp`: Multiplier.
@@ -256,6 +276,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 010 110
+ - Octal: 26
  - Operands:
       - `ooo`: Multiplicand and destination.
       - `i`: Multiplier.
@@ -265,6 +286,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 000 000
+ - Octal: 00
  - Operands: Ignored
  - Description: Does nothing for a cycle
 
@@ -272,6 +294,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 001 100
+ - Octal: 14
  - Operands:
       - `ooo`: The register to not.
       - `ppp`: Ignored
@@ -281,6 +304,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 001 110
+ - Octal: 16
  - Operands:
       - `ooo`: First input and destination register.
       - `ppp`: Second input register.
@@ -291,6 +315,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 101 011
+ - Octal: 53
  - Operands:
       - `ooo`: Source register.
       - `ppp`: Sign flag, bit count, and port number.
@@ -306,6 +331,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcade: 000 011
+ - Octal: 03
  - Operands:
       - `ooo`: The register to pop into
       - `ppp`: Ignored
@@ -315,6 +341,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 000 010
+ - Octal: 02
  - Operands:
       - `ooo`: The register to push
       - `ppp`: Ignored
@@ -324,6 +351,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 010 001
+ - Octal: 21
  - Operands:
       - `ooo`: Ignored
       - `i`: Ignored
@@ -334,6 +362,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 100 010
+ - Octal: 42
  - Operands:
       - `ooo`: The register to store
       - `ppp`: The register holding the address at which to store.
@@ -343,6 +372,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 000 101
+ - Octal: 05
  - Operands:
       - `ooo`: Destination register to subtract from.
       - `ppp`: Second register to subtract.
@@ -352,6 +382,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: i-class
  - Opcode: 010 101
+ - Octal: 25
  - Operands:
       - `ooo`: Destination register to subtract from.
       - `i`: Value to subtract.
@@ -361,6 +392,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 000 001
+ - Octal: 01
  - Operands:
       - `ooo`: The register pair to swap, according to the `acc` register's ID
       - `ppp`: Ignored
@@ -370,6 +402,7 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
 
  - Format: r-class
  - Opcode: 001 111
+ - Octal: 17
  - Operands:
       - `ooo`: First input and destination register
       - `ppp`: Second input register
