@@ -5,6 +5,11 @@ use std::fs::read;
 
 mod components;
 
+/// Size of a ROM
+///
+/// 256 words = 768 bytes
+const ROM_BYTES: usize = 768;
+
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("Hello, world!");
 
@@ -17,28 +22,33 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
              .visible_alias("disk1")
              .takes_value(true)
              .value_name("FILE"))
+        .arg(Arg::with_name("rom")
+            .help("ROM file to load.")
+            .long("rom")
+            .takes_value(true)
+            .value_name("FILE"))
         .get_matches();
 
     let mut mem = components::Memory::new(4096);
 
-    if let Some(disk1_path) = matches.value_of("d1") {
-        let disk1 = read(disk1_path)?;
+    let rom;
 
-        println!("disk1: {:?}", disk1.len());
+    if let Some(rom_path) = matches.value_of("rom") {
+        rom = read(rom_path)?;
+    } else {
+        rom = vec![];
+    }
 
-        // check for boot signature
-        if dbg!(disk1[510]) == 0x55 && dbg!(disk1[511]) == 0xAA {
-            // (boot sector - boot signature) / 3 bytes per word
-            // (512 - 2) / 3 = 170
-            // ...then subtract 1 for indexing from 0
-            for i in 0..169 {
-                // little endian words
-                let val = disk1[3*i+2] as u32
-                    + ((disk1[3*i+1] as u32) << 8)
-                    + ((disk1[3*i] as u32) << 16);
-                mem[i].set(val);
-            }
-        }
+    if rom.len() != ROM_BYTES {
+        panic!("Malformed ROM");
+    }
+
+    for i in 0..255 {
+        // little endian words
+        let val = rom[3*i+2] as u32
+            + ((rom[3*i+1] as u32) << 8)
+            + ((rom[3*i] as u32) << 16);
+        mem[i].set(val);
     }
 
     println!("debug:   {:?}", mem[0]);
