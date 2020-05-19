@@ -6,7 +6,9 @@ use std::ops::{Index, IndexMut};
 /// [`Word`](struct.Word.html)s
 ///
 /// = 2^24
-const MAX_MEM_SIZE: u32 = 16_777_216;
+pub const MAX_MEM_SIZE: u32 = 16_777_216;
+
+pub const DEFAULT_MEM_SIZE: u32 = 4096;
 
 #[derive(Clone, Copy, Default)]
 pub struct Word {

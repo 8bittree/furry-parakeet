@@ -4,6 +4,7 @@ use clap::{Arg, App, crate_version};
 use std::fs::read;
 
 mod components;
+mod machine;
 
 /// Size of a ROM
 ///
@@ -29,8 +30,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .value_name("FILE"))
         .get_matches();
 
-    let mut mem = components::Memory::new(4096);
-
     let rom;
 
     if let Some(rom_path) = matches.value_of("rom") {
@@ -43,24 +42,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         panic!("Malformed ROM");
     }
 
-    for i in 0..255 {
-        // little endian words
-        let val = rom[3*i+2] as u32
-            + ((rom[3*i+1] as u32) << 8)
-            + ((rom[3*i] as u32) << 16);
-        mem[i].set(val);
-    }
-
-    println!("debug:   {:?}", mem[0]);
-    println!("alt:     {:#?}", mem[0]);
-
-    println!("display: {}", mem[0]);
-    println!("alt:     {:#}", mem[0]);
-    println!("pad:     {:4}", mem[0]);
-    println!("lhex:    {:x}", mem[0]);
-    println!("uhex:    {:#X}", mem[0]);
-    println!("octal:   {:08o}", mem[0]);
-    println!("bin:     {:024b}", mem[0]);
+    let mut vm = machine::Machine::new(components::DEFAULT_MEM_SIZE, rom);
+    vm.start();
 
     Ok(())
 }
