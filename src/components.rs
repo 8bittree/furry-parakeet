@@ -113,6 +113,10 @@ impl Memory {
         };
         Memory { data: vec![Word::default(); size.try_into().unwrap()], size }
     }
+
+    pub fn size(&self) -> u32 {
+        self.size
+    }
 }
 
 impl Index<usize> for Memory {
