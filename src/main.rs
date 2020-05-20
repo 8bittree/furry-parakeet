@@ -45,5 +45,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut vm = machine::Machine::new(components::DEFAULT_MEM_SIZE, rom);
     vm.start();
 
+    println!("{}", vm);
+
     Ok(())
 }

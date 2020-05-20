@@ -1,4 +1,5 @@
 use components;
+use std::fmt::{Display, Error};
 
 #[derive(Debug)]
 pub struct Machine {
@@ -42,5 +43,12 @@ impl Machine {
                 + ((self.rom[3*i] as u32) << 16);
             self.mem[i].set(val);
         }
+    }
+}
+
+impl Display for Machine {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> Result<(), Error> {
+        write!(f, "acca: {:06x} accb: {:06b} accc: {:012b}\nbaka: {:06x} bakb: {:06x} bakc: {:012x}\nip: {:06x} sp: {:06x} bp: {:06x} flag: {:06x}\nmem size: {}",
+            self.acca, self.accb, self.accc, self.baka, self.bakb, self.bakc, self.ip, self.sp, self.bp, self.flag, self.mem.size())
     }
 }
