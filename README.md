@@ -52,7 +52,7 @@ flag | 24b |  -  | -
    001   |  *jmp*   |  *jz*    |  *jnz*   |  *jlz*   |  *not*  |  *and*   |  *or*   |  *xor*
    010   | **merg** | **splt** |    -     |    -     | **add** | **sub**  | **mul** | **div**
    011   | **jmp**  | **jz**   | **jnz**  | **jlz**  | **imm** | **immh** |    -    |    -
-   100   |  *int*   |    -     |  *sto*   |  *load*  |    -    |    -     |    -    |    -
+   100   |  *int*   |  *halt*  |  *sto*   |  *load*  |    -    |    -     |    -    |    -
    101   |     -    |    -     |  *in*    |  *out*   |    -    |    -     |    -    |    -
    110   |     -    |    -     |    -     |    -     |    -    |    -     |    -    |    -
    111   |     -    |    -     |    -     |    -     |    -    |    -     |    -    |    -
@@ -111,6 +111,16 @@ Note: `[ooo]` means the memory address pointed to by `ooo`.
       - `i`: Divisor.
  - Description: Performs integer division of `ooo` by `i`, storing the quotient
    in `ooo` and the remainder in `ooo`'s alternative.
+
+### `halt`
+
+ - Format: r-class
+ - Opcode: 100 001
+ - Octal: 41
+ - Operands:
+	  - `ooo`: Ignored.
+	  - `ppp`: Ignored.
+ - Description: Halts and shuts down the machine.
 
 ### `imm`
 
